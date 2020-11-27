@@ -79,15 +79,17 @@ export const List = styled.ul`
     }
 
     button {
-      position: absolute;
-      right: 1px;
-      margin-right: 325px;
+      margin-right: 3px;
+      margin-left: 20px;
+      background: none;
+      outline: none;
+      border: none;
     }
 
     a {
       color: #7159c1;
       text-decoration: none;
-      margin-right: 35px;
+      font-size: 16px;
     }
   }
 `;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
-import { FiTrash2 } from 'react-icons/fi';
+import { FaTrash } from 'react-icons/fa';
 
 import api from '../../services/api';
 
@@ -102,15 +102,17 @@ class Main extends Component {
             <li key={user.login}>
               <img src={user.avatar_url} alt={user.login} />
               <span>{user.login}</span>
-              <Link to={`/details/${encodeURIComponent(user.login)}`}>
-                Detalhes
-              </Link>
-              <button
-                type="button"
-                onClick={() => this.handleDeleteOption(user.name)}
-              >
-                <FiTrash2 size={14} color="#a8a8b3" />
-              </button>
+              <div>
+                <Link to={`/details/${encodeURIComponent(user.login)}`}>
+                  Detalhes
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => this.handleDeleteOption(user.name)}
+                >
+                  <FaTrash size={20} />
+                </button>
+              </div>
             </li>
           ))}
         </List>
